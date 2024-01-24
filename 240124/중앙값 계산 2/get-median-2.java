@@ -26,5 +26,15 @@ public class Main {
         for (int i = 0; i < midArr.length; i++) {
             System.out.print(midArr[i] + " ");
         }
+
+        /* 
+        //풀이 정답
+        for (int i = 0; i < input; i++) {
+            if (i % 2 == 0) {
+                Arrays.sort(arr, 0, i + 1);
+                System.out.print(arr[i / 2] + " ");
+            }
+        }
+        */
     }
 }
