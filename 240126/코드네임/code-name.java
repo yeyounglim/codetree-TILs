@@ -12,8 +12,11 @@ public class Main {
             user = sc.next().charAt(0);
             lv = sc.nextInt();
             data[i] = new Data(user, lv);
-            if(compare > lv) {
-                compare = lv;
+        }
+        compare = data[0].lv;
+        for (int i = 0; i<5; i++) {
+            if(compare > data[i].lv) {
+                compare = data[i].lv;
                 flag = i;
             }
         }
