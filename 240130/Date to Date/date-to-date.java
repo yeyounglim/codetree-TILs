@@ -17,14 +17,14 @@ public class Main {
         int sum = 0;
 
         day1 = num_of_days[m1] - d1 + 1;
-        
+
         if (m1 < m2) {
             for (int i = m1 + 1; i < m2; i++) {
                 sum += num_of_days[i];
             }
             sum += day1 + d2;
         } else if (m1 == m2) {
-            sum += d2 - d1;
+            sum += d2 - d1 + 1;
             if (d1 == d2) {
                 sum = 1;
             }
