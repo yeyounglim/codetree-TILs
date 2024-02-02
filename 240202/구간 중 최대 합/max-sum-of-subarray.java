@@ -12,7 +12,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        for (int i = 0; i < k; i++) {
+        for (int i = 0; i <= n - k; i++) {
             sum[i] = 0;
             for (int j = i; j < k + i; j++) {
                 sum[i] += arr[j];
