@@ -19,7 +19,7 @@ public class Main {
                 arr[i][j] = sc.nextInt();
             }
         }
-  
+
         Pair p = new Pair(r, c);
         visit[0] = arr[r][c];
 
@@ -29,25 +29,30 @@ public class Main {
         int[] dx = {-1, 1, 0, 0};
         int[] dy = {0, 0, -1, 1};// 상하좌우
 
-        for (int i = 0; i < 4; i++) {
-            int nx = p.x + dx[i];
-            int ny = p.y + dy[i];
+        boolean moved;
+        do {
+            moved = false;
+            for (int i = 0; i < 4; i++) {
+                int nx = p.x + dx[i];
+                int ny = p.y + dy[i];
 
-            if (inRange(nx, ny) && arr[nx][ny] > max) {
-                max = arr[nx][ny];
-                visit[cnt] = max;
+                if (inRange(nx, ny) && arr[nx][ny] > max) {
+                    max = arr[nx][ny];
+                    visit[cnt] = max;
 
-                p.setXY(nx, ny);
-                i = 0;
-                cnt++;
+                    p.setXY(nx, ny);
+                    moved = true;
+                    cnt++;
+                    break;
+                }
             }
-        }
+        } while (moved);
 
         for (int i = 0; i < cnt; i++) {
             System.out.print(visit[i] + " ");
         }
-    }
 
+    }
     public static boolean inRange(int x, int y) {
         return 0 <= x && x < sn && 0 <= y && y < sn;
     }
