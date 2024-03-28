@@ -8,6 +8,7 @@ public class Main {
         int n = sc.nextInt();
         sn = n;
         int[][] arr = new int[n][n];
+
         int[] visit = new int[n * n];
 
         int r = sc.nextInt() - 1;
@@ -18,7 +19,7 @@ public class Main {
                 arr[i][j] = sc.nextInt();
             }
         }
-
+  
         Pair p = new Pair(r, c);
         visit[0] = arr[r][c];
 
@@ -48,7 +49,7 @@ public class Main {
     }
 
     public static boolean inRange(int x, int y) {
-        return 0 <= x && x <= sn && 0 <= y && y <= sn;
+        return 0 <= x && x < sn && 0 <= y && y < sn;
     }
 }
 
