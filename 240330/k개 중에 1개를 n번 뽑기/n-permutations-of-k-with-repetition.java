@@ -7,12 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int kk = sc.nextInt();
-        int nn = sc.nextInt();
-        k = kk;
-        n = nn;
-        choose(1);
+        k = sc.nextInt();
+        n = sc.nextInt();
 
+        choose(1);
     }
 
     private static void choose(int current) {
@@ -25,7 +23,6 @@ public class Main {
             choose(current + 1);
             answer.pop();
         }
-
     }
 
     private static void print() {
